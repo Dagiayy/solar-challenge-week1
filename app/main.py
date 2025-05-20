@@ -449,10 +449,12 @@ with tab3:
             if metric in region_data.columns:
                 region_metrics[f'Mean {metric}'] = round(region_data[metric].mean(), 2)
         
+        
         detailed_metrics.append(region_metrics)
     
     detailed_df = pd.DataFrame(detailed_metrics)
     
+
     # Display the table
     st.dataframe(detailed_df, use_container_width=True)
 
